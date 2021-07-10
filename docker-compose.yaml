@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+    serviceOne:
+        image: lab3:latest
+        ports: 
+            - 3000:8080
+        deploy: 
+            replicas: 3
+    serviceTwo: 
+        image: lab3:latest
+        ports: 
+            - 3001:8080
+        deploy:
+            replicas: 2
+        

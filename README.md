@@ -1,9 +1,19 @@
 ##Docker Command Line Instructions
 -Docker build image command
-$> docker build -t lab_two:latest .
+$> docker build -t lab3:latest .
 
--Docker run container command
-$> docker run -d --rm --name myapp -p 8080:8080 lab_two:latest 
+-Deploy stack 
+$> docker stack deploy -c docker-compose.yaml lab3-stack
+
+-Scale out first stack to 7 instances/replicas
+$> docker services scale lab3-stack_serviceOne=7
+
+-Remove stack and delete containers
+$> docker stack rm lab3-stack
 
 -To Display the website in a browser
-http://localhost8080
+http://localhost:8080 for docker container 
+
+http://localhost:3000 (serviceOne) for local machine
+
+http://localhost:3001 (serviceTwo) for local machine
