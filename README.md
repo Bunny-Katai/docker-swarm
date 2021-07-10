@@ -13,6 +13,7 @@ $> docker services scale lab3-stack_serviceOne=7
 $> docker stack rm lab3-stack
 
 -To Display the website in a browser
+
 http://localhost:8080 for docker container 
 
 http://localhost:3000 (serviceOne) for local machine
